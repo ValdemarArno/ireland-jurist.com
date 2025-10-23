@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valdem'ar Arno | Language Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="language-page">
+    <div class="language-container">
+        <div class="logo">
+            <h1>Valdem'ar <span>Arno</span></h1>
+            <p>International Lawyer of Ireland</p>
+        </div>
+        
+        <div class="language-selection">
+            <h2>Select Language</h2>
+            <div class="language-buttons">
+                <button class="lang-btn" onclick="selectLanguage('ru')">
+                    <span class="flag">🇷🇺</span> Русский
+                </button>
+                <button class="lang-btn" onclick="selectLanguage('en')">
+                    <span class="flag">🇺🇸</span> English
+                </button>
+                <button class="lang-btn" onclick="selectLanguage('ga')">
+                    <span class="flag">🇮🇪</span> Gaeilge
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectLanguage(lang) {
+            localStorage.setItem('selectedLanguage', lang);
+            window.location.href = 'main.html';
+        }
+    </script>
+</body>
+</html>
